@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Anniversary!</title>
     <style>
-        /* General Page Styling */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Georgia', serif; /* A romantic, classic font */
-            background-color: #fff0f3; /* A soft, warm blush pink */
-            overflow: hidden; /* Prevents scrolling so it feels like an app */
+            font-family: 'Georgia', serif; 
+            background-color: #fff0f3; 
+            /* CHANGED: Allow vertical scrolling, but prevent horizontal scrolling */
+            overflow-y: auto; 
+            overflow-x: hidden; 
         }
 
         /* The 'Pages' */
@@ -21,7 +21,12 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            /* CHANGED: Let the page grow taller than the screen if there's a lot of text */
+            min-height: 100vh; 
+            /* CHANGED: Added padding so text doesn't touch the edges when scrolling */
+            padding: 50px 20px; 
+            box-sizing: border-box; 
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,7 +37,7 @@
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-            pointer-events: none; /* Prevents clicking buttons on hidden pages */
+            pointer-events: none; 
             z-index: 1;
         }
 
@@ -49,20 +54,19 @@
             color: #c9184a;
             font-size: 3rem;
             margin-bottom: 20px;
-            padding: 0 20px;
         }
 
         p {
             color: #590d22;
             font-size: 1.5rem;
             max-width: 600px;
-            padding: 0 20px;
             line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         /* Button Styling */
         button {
-            margin-top: 40px;
+            margin-top: 20px;
             padding: 15px 30px;
             font-size: 1.2rem;
             color: white;
@@ -95,18 +99,25 @@
     </div>
 
     <div class="page" id="page3">
-        <h1>Your smile is my favorite</h1>
+        <h1>The Day</h1>
         <p>
-            It makes me forget what i wanted to talk to you about.
-            The sweetes of smiles i have only seen is on you.
-            These 3 years have been nothing short of a miracle.. Of how we fought, stayed, made up.
-            Uff... And i hope this continues for the rest of our lives.
+            I know the amount of times I have told you about this. But i wanna reiterate it again.
+            On 16 June 2023, I was sitting on my couch watching a movie.
+            And that's when I recieved your call.
+            I didn't plan on proposing to you that night... But I took a chance.
+            From starting in a relationship, to getting caught...
+            And from there to restarting it more or less and bringing it up to this level, 
+            has been an immaculous journey.
+            Words aren't enough to tell you how much I love you...
+            Like I love you a lot.... Your waala Lot.. and more... So i definitely win in this matter.
+            3 years of love, 3 years of fights, 3 years of resolution... Looking forward to many more
+            Till Death Do Us Apart.
         </p>
         <button onclick="nextPage(3, 4)">One more thing...</button>
     </div>
 
     <div class="page" id="page4">
-        <h1>I love you!</h1>
+        <h1>I love you very very very much!</h1>
         <p>Here is to many more beautiful years together. 🥂</p>
         </div>
 
